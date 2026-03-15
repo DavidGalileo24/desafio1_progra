@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main(){
@@ -29,6 +30,7 @@ int main(){
     cin >> hours_worked;
 
     //Calcs
+    cout << fixed << setprecision(2);
     double base_salary = hour_salary * hours_worked;
 
     //Prints
