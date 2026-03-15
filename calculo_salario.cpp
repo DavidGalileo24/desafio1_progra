@@ -23,10 +23,27 @@ int main(){
     getline(cin, lastnames);
     cout << "3. Cargo: ";
     getline(cin, job_position);
-    cout << "4 Costo hora: ";
+    cout << "4. Costo hora: $";
     cin >> hour_salary;
     cout << "5. Horas trabajadas: ";
     cin >> hours_worked;
+
+    //Calcs
+    double base_salary = hour_salary * hours_worked;
+
+    //Prints
+    cout << "*****************************************" << endl;
+    cout << "Empleado: " << lastnames << " " << names << endl;
+    cout << "Cargo: " << job_position << endl;
+    cout << "*****************************************" << endl;
+
+    cout << "Sueldo inicial: $" << base_salary << endl;
+    cout << "descuentos de ley" << endl;
+    cout << "- Renta: $" << base_salary * rent << endl;
+    cout << "- ISSS: $" << base_salary * isss << endl;
+    cout << "- Seguro de vida: $" << life_insurance << endl;
+    cout << "--------------------------------" << endl;
+    cout << "Sueldo a pagar: $" << base_salary - (base_salary * rent) - (base_salary * isss) - life_insurance << endl;
 
     return 0;
 }
